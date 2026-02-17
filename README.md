@@ -18,7 +18,7 @@ For this implementation, I chose a cost-based insertion sort. Instead of using s
 
 ---
 
-## 🛠️ Instruction Set
+## Instruction Set
 | Command | Action |
 | :--- | :--- |
 | `sa`, `sb`, `ss` | Swap the first 2 elements at the top of a stack. |
@@ -28,7 +28,7 @@ For this implementation, I chose a cost-based insertion sort. Instead of using s
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Compilation
 The project includes a `Makefile` with the standard 42 rules:
@@ -44,7 +44,7 @@ make bonus
 make fclean
 ```
 
-Execution
+## Execution
 
 To see the instructions generated to sort a stack:
 ```Bash
@@ -60,27 +60,27 @@ ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker $ARG
 
 I implemented a custom Checker that replicates the behavior of the stack and validates the sorting logic.
 
-    It reads instructions from stdin.
+* **    It reads instructions from stdin.
 
-    Executes them on the initial stack.
+* **    Executes them on the initial stack.
 
-    Displays OK if the stack is sorted and Stack B is empty.
+* **    Displays OK if the stack is sorted and Stack B is empty.
 
-    Displays KO if the stack remains unsorted.
+* **    Displays KO if the stack remains unsorted.
 
-    Displays Error for invalid arguments or unknown instructions.
+* **    Displays Error for invalid arguments or unknown instructions.
 
 ## Performance Benchmarks
 
 My implementation consistently achieves the following results (meeting the highest 42 evaluation brackets):
 
-    3 numbers: Max 3 operations.
+  * **  3 numbers: Max 3 operations.
 
-    5 numbers: Max 12 operations.
+  * **  5 numbers: Max 12 operations.
 
-    100 numbers: ~600 operations (Top score).
+  * **  100 numbers: ~600 operations (Top score).
 
-    500 numbers: ~5500 operations (Top score).
+  * **  500 numbers: ~5500 operations (Top score).
 
 ## Contact
 

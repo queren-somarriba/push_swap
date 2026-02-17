@@ -19,10 +19,10 @@ Key Concepts:
 
 ## Instruction Set
 Command	Action
-sa, sb, ss	Swap the first 2 elements at the top of a stack.
+*sa, sb, ss	Swap the first 2 elements at the top of a stack.
 pa, pb	Take the first element at the top of one stack and put it on the other.
 ra, rb, rr	Shift up all elements of a stack by 1 (The first becomes the last).
-rra, rrb, rrr	Shift down all elements of a stack by 1 (The last becomes the first).
+rra, rrb, rrr	Shift down all elements of a stack by 1 (The last becomes the first).*
 ## Getting Started
 Compilation
 
@@ -44,13 +44,13 @@ To see the instructions generated to sort a stack:
 Bash
 
 ./push_swap 4 67 3 87 23
+ 
+ To verify the result using the Bonus Checker:
+ Bash
+ 
+ ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker $ARG
 
-To verify the result using the Bonus Checker:
-Bash
-
-ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker $ARG
-
-Bonus: Checker Program
+## Bonus: Checker Program
 
 I implemented a custom Checker that replicates the behavior of the stack and validates the sorting logic.
 

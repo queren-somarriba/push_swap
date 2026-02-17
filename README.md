@@ -41,7 +41,7 @@ make
 make bonus
 
 # Clean object files and the executable
-make fclean
+make fclean```
 
 ## Execution
 

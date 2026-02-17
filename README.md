@@ -1,16 +1,16 @@
 # Push_swap - @42Paris
 
-## Project Overview
+### Project Overview
 **Push_swap** is a highly efficient algorithm project that challenges you to sort a stack of integers using a limited set of instructions and two stacks (**a** and **b**). The goal is to find the shortest possible sequence of operations to sort the data.
 
 This project is a deep dive into data structures (Linked Lists), complexity (Big O notation), and algorithm optimization.
 
 ---
 
-## Algorithm: "The Turkish Algorithm"
+### Algorithm: "The Turkish Algorithm"
 For this implementation, I chose a cost-based insertion sort. Instead of using simple chunks, this approach calculates the most efficient move at every single step.
 
-### Key Concepts:
+#### Key Concepts:
 * **Target Positioning:** For every element in Stack A, the algorithm identifies its "target" position in Stack B (the largest element that is still smaller than the current one).
 * **Cost Calculation:** The program evaluates the number of operations required to bring an element from A and its target in B to the top of their respective stacks.
 * **Rotation Optimization:** If both the element and its target are in the same half of their stacks (both in the top or both in the bottom), the algorithm utilizes double rotations (`rr` or `rrr`) to minimize moves.
@@ -18,7 +18,7 @@ For this implementation, I chose a cost-based insertion sort. Instead of using s
 
 ---
 
-## Instruction Set
+### Instruction Set
 | Command | Action |
 | :--- | :--- |
 | `sa`, `sb`, `ss` | Swap the first 2 elements at the top of a stack. |
@@ -28,7 +28,7 @@ For this implementation, I chose a cost-based insertion sort. Instead of using s
 
 ---
 
-## Getting Started
+### Getting Started
 
 ### Compilation
 The project includes a `Makefile` with the standard 42 rules:
@@ -45,7 +45,7 @@ make fclean
 ```
 ---
 
-## Execution
+### Execution
 
 To see the instructions generated to sort a stack:
 ```Bash
@@ -59,7 +59,7 @@ ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker $ARG
 ```
 ---
 
-## Bonus: Checker Program
+### Bonus: Checker Program
 
 I implemented a custom Checker that replicates the behavior of the stack and validates the sorting logic.
 
@@ -75,7 +75,7 @@ I implemented a custom Checker that replicates the behavior of the stack and val
 
 ---
 
-## Performance Benchmarks
+### Performance Benchmarks
 
 My implementation consistently achieves the following results (meeting the highest 42 evaluation brackets):
 
@@ -89,7 +89,7 @@ My implementation consistently achieves the following results (meeting the highe
 
 ---
 
-### Contact
+##### Contact
 
     Login: qsomarri
 

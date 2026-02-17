@@ -1,13 +1,13 @@
 # Push_swap - @42Paris
 
-## 📊 Project Overview
+## Project Overview
 **Push_swap** is a highly efficient algorithm project that challenges you to sort a stack of integers using a limited set of instructions and two stacks (**a** and **b**). The goal is to find the shortest possible sequence of operations to sort the data.
 
 This project is a deep dive into data structures (Linked Lists), complexity (Big O notation), and algorithm optimization.
 
 ---
 
-## 💡 Algorithm: "The Turkish Algorithm"
+## Algorithm: "The Turkish Algorithm"
 For this implementation, I chose a cost-based insertion sort. Instead of using simple chunks, this approach calculates the most efficient move at every single step.
 
 ### Key Concepts:
@@ -41,7 +41,7 @@ make
 make bonus
 
 # Clean object files and the executable
-make fclean```
+make fclean`
 
 ## Execution
 

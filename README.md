@@ -1,55 +1,83 @@
-# Push_swap
+Push_swap - @42Paris
+Project Overview
 
-Push_swap est un projet en C visant à trier une pile d'entiers en utilisant un ensemble limité d'opérations sur deux piles (`a` et `b`). L'objectif est d'optimiser le nombre de coups nécessaires pour trier les nombres.
+Push_swap is a highly efficient algorithm project that challenges you to sort a stack of integers using a limited set of instructions and two stacks (a and b). The goal is to find the shortest possible sequence of operations to sort the data.
 
-## Installation
+This project is a deep dive into data structures (Linked Lists), complexity (Big O notation), and algorithm optimization.
+Algorithm: "The Turkish Algorithm"
 
-Pour compiler `push_swap`, utilisez la commande suivante :
+For this implementation, I chose a cost-based insertion sort. Instead of using simple chunks, this approach calculates the most efficient move at every single step.
+Key Concepts:
 
-```sh
-gcc -Wall -Wextra -Werror push_swap.c utils/*.c -o push_swap
-```
+    Target Positioning: For every element in Stack A, the algorithm identifies its "target" position in Stack B (the largest element that is still smaller than the current one).
 
-## Utilisation
+    Cost Calculation: The program evaluates the number of operations required to bring an element from A and its target in B to the top of their respective stacks.
 
-La syntaxe de `push_swap` est la suivante :
+    Rotation Optimization: If both the element and its target are in the same half of their stacks (both in the top or both in the bottom), the algorithm utilizes double rotations (rr or rrr) to minimize moves.
 
-```sh
-./push_swap [list of integers]
-```
+    The "Cheapest" Move: Only the element with the lowest combined cost is pushed to Stack B in each iteration.
 
-Exemple :
+🛠️ Instruction Set
+Command	Action
+sa, sb, ss	Swap the first 2 elements at the top of a stack.
+pa, pb	Take the first element at the top of one stack and put it on the other.
+ra, rb, rr	Shift up all elements of a stack by 1 (The first becomes the last).
+rra, rrb, rrr	Shift down all elements of a stack by 1 (The last becomes the first).
+🚀 Getting Started
+Compilation
 
-```sh
+The project includes a Makefile with the standard 42 rules:
+Bash
+
+# Compiles the push_swap mandatory executable
+make
+
+# Compiles the checker bonus program
+make bonus
+
+# Clean object files and the executable
+make fclean
+
+Execution
+
+To see the instructions generated to sort a stack:
+Bash
+
 ./push_swap 4 67 3 87 23
-```
 
-Le programme retournera une suite d'opérations pour trier la liste donnée.
+To verify the result using the Bonus Checker:
+Bash
 
-## Opérations disponibles
+ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker $ARG
 
-- `sa` : Échange les deux premiers éléments de la pile `a`
-- `sb` : Échange les deux premiers éléments de la pile `b`
-- `ss` : Effectue `sa` et `sb` simultanément
-- `pa` : Pousse le premier élément de `b` vers `a`
-- `pb` : Pousse le premier élément de `a` vers `b`
-- `ra` : Fait pivoter `a` vers le haut
-- `rb` : Fait pivoter `b` vers le haut
-- `rr` : Fait pivoter `a` et `b` vers le haut simultanément
-- `rra` : Fait pivoter `a` vers le bas
-- `rrb` : Fait pivoter `b` vers le bas
-- `rrr` : Fait pivoter `a` et `b` vers le bas simultanément
+Bonus: Checker Program
 
-## Bonus : Vérificateur
+I implemented a custom Checker that replicates the behavior of the stack and validates the sorting logic.
 
-### Checker
+    It reads instructions from stdin.
 
-Un programme `checker` est fourni pour vérifier si la suite d'opérations donnée trie correctement la pile.
+    Executes them on the initial stack.
 
-Utilisation :
+    Displays OK if the stack is sorted and Stack B is empty.
 
-```sh
-./push_swap 4 67 3 87 23 | ./checker 4 67 3 87 23
-```
+    Displays KO if the stack remains unsorted.
 
-Le `checker` affichera `OK` si la pile est bien triée, sinon `KO`.
+    Displays Error for invalid arguments or unknown instructions.
+
+Performance Benchmarks
+
+My implementation consistently achieves the following results (meeting the highest 42 evaluation brackets):
+
+    3 numbers: Max 3 operations.
+
+    5 numbers: Max 12 operations.
+
+    100 numbers: ~600 operations (Top score).
+
+    500 numbers: ~5500 operations (Top score).
+
+📬 Contact
+
+    Login: qsomarri
+
+    School: 42 Paris

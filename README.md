@@ -1,13 +1,13 @@
 # Push_swap - @42Paris
 
-## Project Overview
+## 📊 Project Overview
 **Push_swap** is a highly efficient algorithm project that challenges you to sort a stack of integers using a limited set of instructions and two stacks (**a** and **b**). The goal is to find the shortest possible sequence of operations to sort the data.
 
 This project is a deep dive into data structures (Linked Lists), complexity (Big O notation), and algorithm optimization.
 
 ---
 
-## Algorithm: "The Turkish Algorithm"
+## 💡 Algorithm: "The Turkish Algorithm"
 For this implementation, I chose a cost-based insertion sort. Instead of using simple chunks, this approach calculates the most efficient move at every single step.
 
 ### Key Concepts:
@@ -41,21 +41,22 @@ make
 make bonus
 
 # Clean object files and the executable
-make fclean`
+make fclean
+```
 
-## Execution
+Execution
 
 To see the instructions generated to sort a stack:
 Bash
 
 ./push_swap 4 67 3 87 23
- 
- To verify the result using the Bonus Checker:
- Bash
- 
- ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker $ARG
 
-## Bonus: Checker Program
+To verify the result using the Bonus Checker:
+Bash
+
+ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker $ARG
+
+🏆 Bonus: Checker Program
 
 I implemented a custom Checker that replicates the behavior of the stack and validates the sorting logic.
 
@@ -69,7 +70,7 @@ I implemented a custom Checker that replicates the behavior of the stack and val
 
     Displays Error for invalid arguments or unknown instructions.
 
-## Performance Benchmarks
+📈 Performance Benchmarks
 
 My implementation consistently achieves the following results (meeting the highest 42 evaluation brackets):
 
@@ -81,7 +82,7 @@ My implementation consistently achieves the following results (meeting the highe
 
     500 numbers: ~5500 operations (Top score).
 
-## Contact
+📬 Contact
 
     Login: qsomarri
 

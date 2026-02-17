@@ -1,5 +1,5 @@
-Push_swap - @42Paris
-Project Overview
+# Push_swap - @42Paris
+ ## Project Overview
 
 Push_swap is a highly efficient algorithm project that challenges you to sort a stack of integers using a limited set of instructions and two stacks (a and b). The goal is to find the shortest possible sequence of operations to sort the data.
 
@@ -17,28 +17,28 @@ Key Concepts:
 
     The "Cheapest" Move: Only the element with the lowest combined cost is pushed to Stack B in each iteration.
 
-🛠️ Instruction Set
+## Instruction Set
 Command	Action
 sa, sb, ss	Swap the first 2 elements at the top of a stack.
 pa, pb	Take the first element at the top of one stack and put it on the other.
 ra, rb, rr	Shift up all elements of a stack by 1 (The first becomes the last).
 rra, rrb, rrr	Shift down all elements of a stack by 1 (The last becomes the first).
-🚀 Getting Started
+## Getting Started
 Compilation
 
 The project includes a Makefile with the standard 42 rules:
 Bash
 
-# Compiles the push_swap mandatory executable
+### Compiles the push_swap mandatory executable
 make
 
-# Compiles the checker bonus program
+### Compiles the checker bonus program
 make bonus
 
-# Clean object files and the executable
+### Clean object files and the executable
 make fclean
 
-Execution
+## Execution
 
 To see the instructions generated to sort a stack:
 Bash
@@ -64,7 +64,7 @@ I implemented a custom Checker that replicates the behavior of the stack and val
 
     Displays Error for invalid arguments or unknown instructions.
 
-Performance Benchmarks
+## Performance Benchmarks
 
 My implementation consistently achieves the following results (meeting the highest 42 evaluation brackets):
 
@@ -76,7 +76,7 @@ My implementation consistently achieves the following results (meeting the highe
 
     500 numbers: ~5500 operations (Top score).
 
-📬 Contact
+## Contact
 
     Login: qsomarri
 

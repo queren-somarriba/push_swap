@@ -91,7 +91,9 @@ My implementation consistently achieves the following results (meeting the highe
 
   * 500 numbers: ~5500 operations.
 
-![push_swap100](https://github.com/user-attachments/assets/cc66ad59-e726-406d-9bea-23991b5c6c93)
+<p align="center">
+  <img src="assets/push_swap10.gif" alt="Algorithm on 10 elements" width="600">
+</p>
 
 ---
 

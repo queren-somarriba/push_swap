@@ -20,7 +20,6 @@ For this implementation, I chose a cost-based insertion sort. Instead of using s
 <p align="center">
   <img src="assets/push_swap10.gif" alt="On 10 elements" width="600">
 </p>
-![push_swap10](https://github.com/user-attachments/assets/8012a117-0f80-4ada-a605-d16f480073cc)
 
 ### Instruction Set
 | Command | Action |
@@ -92,7 +91,7 @@ My implementation consistently achieves the following results (meeting the highe
   * 500 numbers: ~5500 operations.
 
 <p align="center">
-  <img src="assets/push_swap10.gif" alt="Algorithm on 10 elements" width="600">
+  <img src="assets/push_swap100.gif" alt="Algorithm on 100 elements" width="600">
 </p>
 
 ---

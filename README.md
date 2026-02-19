@@ -16,7 +16,9 @@ For this implementation, I chose a cost-based insertion sort. Instead of using s
 * **Rotation Optimization:** If both the element and its target are in the same half of their stacks (both in the top or both in the bottom), the algorithm utilizes double rotations (`rr` or `rrr`) to minimize moves.
 * **The "Cheapest" Move:** Only the element with the lowest combined cost is pushed to Stack B in each iteration.
 
----
+---![push_swap10](https://github.com/user-attachments/assets/8012a117-0f80-4ada-a605-d16f480073cc)
+
+![push_swap100](https://github.com/user-attachments/assets/cc66ad59-e726-406d-9bea-23991b5c6c93)
 
 ### Instruction Set
 | Command | Action |
@@ -83,9 +85,9 @@ My implementation consistently achieves the following results (meeting the highe
 
   * 5 numbers: Max 12 operations.
 
-  * 100 numbers: ~600 operations (Top score).
+  * 100 numbers: ~600 operations.
 
-  * 500 numbers: ~5500 operations (Top score).
+  * 500 numbers: ~5500 operations.
 
 ---
 
